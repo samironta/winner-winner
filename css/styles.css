@@ -1,3 +1,43 @@
 body {
     background-color: aquamarine;
 }
+
+header {
+    background-color: #77adda;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+}
+
+.content {
+    background-color: #2ca152;
+    color: white;
+    padding: 20px;
+    height: 300px;
+    flex: 3;
+}
+
+.top-score {
+    background-color: #e6e6a5;
+    padding: 20px;
+    height: 300px;
+    flex: 1;
+}
+
+
+.progress {
+    background-color: #da81ce;
+    color: white;
+    padding: 20px;
+}
+
+footer {
+    background-color: slategrey;
+    height: auto;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
