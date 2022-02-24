@@ -1,43 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: aquamarine;
+    text-rendering: optimizeSpeed;
+    font-size: 80%;
+    padding: 0;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+.heading {
+    font-size: 1.5rem;
 }
 
 header {
-    background-color: #77adda;
+    background-color: #9fc7e7;
+
     text-align: center;
-    padding: 20px;
+    padding: ;
 }
 
-main {
+.container {
+    width: 95%;
+    /*max-width: 1100px; */
+    margin: 0 auto;
+}
+
+.game-area {
     display: flex;
 }
 
-.content {
-    background-color: #2ca152;
-    color: white;
-    padding: 20px;
-    height: 300px;
-    flex: 3;
-}
-
-.top-score {
-    background-color: #e6e6a5;
-    padding: 20px;
-    height: 300px;
-    flex: 1;
-}
 
 
-.progress {
-    background-color: #da81ce;
-    color: white;
-    padding: 20px;
-}
+
+
+
+
+
 
 footer {
     background-color: slategrey;
     height: auto;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
