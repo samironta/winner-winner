@@ -25,7 +25,7 @@ header {
     background-color: #9fc7e7;
 
     text-align: center;
-    padding: ;
+
 }
 
 .container {
@@ -34,9 +34,7 @@ header {
     margin: 0 auto;
 }
 
-.game-area {
-    display: flex;
-}
+.game-area {}
 
 
 

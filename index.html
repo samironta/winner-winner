@@ -24,15 +24,57 @@
     </header>
 
     <main class="container">
-        <div class="game-area">
-            <div class="content">
+        <section id="welcome">
+            <div class="welcome-area">
+                <div class="content">
+                    <div class="container">
+                        <div id="home" class="flex-center flex-column">
+                            <h1>welcome to WINNER-WINNER</h1>
+                            <h3>Wanna Play?</h3>
+                            <details>
+                                <summary>rules of the game</summary>
+                                <p>you get 10 multiple questions</p>
+                                <p>there are 3 categories of questions to choose from</p>
+                                <p>you have 3 levels of difficulty</p>
+                                <p>points are awarded based on level of difficulty</p>
+                                <p>10points for easy, 20 for medium and 30 for hard</p>
+                                <p></p>
+                            </details>
+                            <form action="/game.html">
+                                <label for="category">Choose a category:</label>
+                                <select id="category" name="category">
+                                    <option value="">Choose</option>
+                                    <option value="9">General Knowledge</option>
+                                    <option value="11">Film</option>
+                                    <option value="18">Computers</option>
+
+                                </select>
+                                <label for="level">Choose a level:</label>
+                                <select id="level" name="level">
+                                    <option value="">Choose</option>
+                                    <option value="easy">Easy</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="hard">Hard</option>
+
+                                </select>
+                                <input type="submit" value="lets play">
+                            </form>
+
+                            <a class="btn" href="/game.html">let's play</a>
+                            <a class="btn" href="/highscores.html">
+                                <tp></tp>top players
+                            </a>
 
 
-                <h3>Wanna Play?</h3>
 
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+        <section id="game-area">
 
+        </section>
 
 
 
