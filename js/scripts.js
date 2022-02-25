@@ -1,4 +1,4 @@
-const URL = "https://opentdb.com/api.php?amount=10&"
+const URL = "https://opentdb.com/api.php?amount=20&" //base URL requesting 20 questions, user only gets 10
 
 //console.log(URL + category + level);
 
@@ -18,20 +18,20 @@ let availableQuesions = [];
 
 let questions = [];
 
-
+// user prompt for quiz options
 var category = prompt("please choose a category 9 for general knowledge, 11 for film and 18 for computers");
 var level = prompt("Please choose level, easy, medium or hard");
 
 
 
-
+// user response plus base URL used for API fetch
 fetch(URL + "category=" + category + "&difficulty=" + level + "&type=multiple")
     .then((res) => {
-        return res.json();
+        return res.json(); //result parsed into json format
     })
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map((loadedQuestion) => {
-            console.log(questions);
+            //console.log(questions);
             const formattedQuestion = {
                 question: loadedQuestion.question,
             };
@@ -67,12 +67,13 @@ startGame = () => {
 
     questionCounter = 0;
     score = 0;
-    availableQuesions = [...questions];
+    availableQuesions = [...questions]; //spread array of all questions returned
     getNewQuestion();
     game.classList.remove('hidden');
     loader.classList.add('hidden');
 };
 
+//gets new question from array of available questions
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
 
@@ -88,7 +89,7 @@ getNewQuestion = () => {
     //update progressbar
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
 
-
+    // picks a random question from available question array
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
     question.innerHTML = currentQuestion.question;
@@ -98,7 +99,7 @@ getNewQuestion = () => {
         choice.innerHTML = currentQuestion["choice" + number];
     });
 
-    availableQuesions.splice(questionIndex, 1);
+    availableQuesions.splice(questionIndex, 1); //removes question that has been used
     acceptingAnswers = true;
 };
 
