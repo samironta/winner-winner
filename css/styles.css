@@ -8,6 +8,7 @@ html {
 
 body {
     background-color: aquamarine;
+    background-image: url(../assets/images/pexels-jill-wellington-40815.jpg);
     text-rendering: optimizeSpeed;
     font-size: 80%;
     padding: 0;
@@ -15,12 +16,13 @@ body {
     margin: 0;
 }
 
-.heading {}
 
 
 
 header {
-    background-color: #9fc7e7;
+    background-color: #e294d8;
+    top: 0;
+
 
     text-align: center;
 
@@ -34,8 +36,8 @@ h4 {
 }
 
 h1 {
-    font-size: ;
-    color: darkblue;
+    font-size: 3rem;
+    color: whitesmoke;
     margin-bottom: 1rem;
 }
 
@@ -45,16 +47,22 @@ h1>span {
 }
 
 h2 {
-    color: darkblue;
-    font-size: 4rem;
+    color: whitesmoke;
+    font-size: 2rem;
     margin-bottom: 4rem;
     font-weight: 600;
 
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
+}
+
+details {
+    color: #dfe9e1;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /* all purpose css*/

@@ -10,22 +10,32 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="end" class="flex-center flex-column">
-            <h1>Congratulations!</h1>
+    <header>
+        <nav>
+            <h1 class="heading">
+                <img src="assets/images/logo1.png" alt="logo" class="logo">
 
-            <h2 id="finalScore"></h2>
-            <form>
-                <input type="text" name="username" id="username" placeholder="username" />
-                <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
-                    Save
-                </button>
-            </form>
-            <a class="btn" href="/quiz.html">Play Again</a>
-            <a class="btn" href="/index.html">Go Home</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div id="end" class="flex-center flex-column">
+                <h1>Congratulations!</h1>
+                <h2>Your Final Score Is</h2>
+
+                <h2 id="finalScore"></h2>
+                <!--        <form>
+                    <input type="text" name="username" id="username" placeholder="username" />
+                    <button type="submit" class="btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>
+                        Save
+                    </button>
+                </form> -->
+                <a class="btn" href="/quiz.html">Play Again</a>
+                <a class="btn" href="/index.html">Go Home</a>
+            </div>
         </div>
-    </div>
-    <script src="end.js"></script>
+    </main>
+    <script src="js/game-over.js"></script>
 </body>
 
 </html>

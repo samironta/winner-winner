@@ -25,7 +25,6 @@ function getUserInput() {
 };
 
 fetch(URL + "category=" + category + "&difficulty=" + level + "&type=multiple")
-    //fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple')
     .then((res) => {
         return res.json();
     })
@@ -113,6 +112,7 @@ choices.forEach(choice => {
         const classToApply =
             selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
+        // check what level of difficulty before awarding points
         if (classToApply === "correct") {
             if (level === "easy") {
                 incrementScore(CORRECT_easy);
@@ -122,7 +122,7 @@ choices.forEach(choice => {
                 incrementScore(CORRECT_hard);
             }
         }
-
+        // highlights if answer was right or wrong
         selectedChoice.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
@@ -131,10 +131,8 @@ choices.forEach(choice => {
         }, 1000);
     });
 });
-// checks for correct answer
+// updates score counter
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
 };
-
-//startGame();
