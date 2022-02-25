@@ -9,8 +9,6 @@ const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
-var category = prompt("please choose a category 9 for general knowledge, 11 for film and 18 for computers");
-var level = prompt("Please choose level, easy, medium or hard");
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -20,9 +18,12 @@ let availableQuesions = [];
 
 let questions = [];
 
-function getUserInput() {
 
-};
+var category = prompt("please choose a category 9 for general knowledge, 11 for film and 18 for computers");
+var level = prompt("Please choose level, easy, medium or hard");
+
+
+
 
 fetch(URL + "category=" + category + "&difficulty=" + level + "&type=multiple")
     .then((res) => {

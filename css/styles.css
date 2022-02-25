@@ -22,10 +22,15 @@ body {
 header {
     background-color: #e294d8;
     top: 0;
-
-
     text-align: center;
 
+}
+
+a {
+    font-size: 2rem;
+    color: rgb(22, 20, 20);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 h1,
@@ -60,7 +65,7 @@ h3 {
 }
 
 details {
-    color: #dfe9e1;
+    color: #111612;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -154,6 +159,11 @@ input::placeholder {
 }
 
 /*-----------------------quiz page css----------- */
+.container-quiz {
+    margin-bottom: 10rem;
+    padding-bottom: 5rem;
+}
+
 .choice-container {
     display: flex;
     margin-bottom: 1rem;
@@ -191,7 +201,7 @@ input::placeholder {
     background-color: #dc3545;
 }
 
-/* HUD */
+/* score display */
 
 #hud {
     display: flex;
@@ -220,7 +230,7 @@ input::placeholder {
     width: 0%;
 }
 
-/*------------spinning loader--------fro w3schools-- */
+/*------------spinning loader--------fro w3schools--
 #loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
@@ -241,22 +251,40 @@ input::placeholder {
 
     100% {
         transform: rotate(360deg);
-    }
+    }  */
 
 
 
 
 
 
+/* footer styling for all pages */
+footer {
+    margin-top: auto;
+    background-color: slategrey;
 
-    footer {
-        background-color: slategrey;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
 
-        color: white;
-        text-align: center;
-        padding: 0;
-        position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
-        bottom: 0;
-        width: 100%;
-    }
+.fab {
+
+    padding: 20px;
+    font-size: 20px;
+    width: ;
+    text-align: center;
+    text-decoration: none;
+
+
+
+}
+
+
+.fab:hover {
+    opacity: 0.7;
+}
