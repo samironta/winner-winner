@@ -1,6 +1,6 @@
 const URL = "https://opentdb.com/api.php?amount=10&"
-var category = document.getElementById("category").value;
-var level = document.getElementById("level").value;
+
+//console.log(URL + category + level);
 
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
@@ -9,8 +9,8 @@ const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
-
-
+var category = prompt("please choose a category 9 for general knowledge, 11 for film and 18 for computers");
+var level = prompt("Please choose level, easy, medium or hard");
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -20,12 +20,18 @@ let availableQuesions = [];
 
 let questions = [];
 
+function getUserInput() {
+
+};
+
 fetch(URL + "category=" + category + "&difficulty=" + level + "&type=multiple")
+    //fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple')
     .then((res) => {
         return res.json();
     })
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map((loadedQuestion) => {
+            console.log(questions);
             const formattedQuestion = {
                 question: loadedQuestion.question,
             };
@@ -57,6 +63,8 @@ const CORRECT_hard = 30;
 const MAX_QUESTIONS = 10;
 
 startGame = () => {
+
+
     questionCounter = 0;
     score = 0;
     availableQuesions = [...questions];
@@ -71,7 +79,7 @@ getNewQuestion = () => {
         localStorage.setItem("mostRecentScore", score);
 
         //go to the end page
-        return window.location.assign("/end.html");
+        return window.location.assign("/game-over.html");
     }
     questionCounter++;
 
@@ -83,11 +91,11 @@ getNewQuestion = () => {
 
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
-    question.innerText = currentQuestion.question;
+    question.innerHTML = currentQuestion.question;
 
     choices.forEach(choice => {
         const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number];
+        choice.innerHTML = currentQuestion["choice" + number];
     });
 
     availableQuesions.splice(questionIndex, 1);
@@ -106,9 +114,9 @@ choices.forEach(choice => {
             selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
         if (classToApply === "correct") {
-            if (difficulty === "easy") {
+            if (level === "easy") {
                 incrementScore(CORRECT_easy);
-            } else if (difficulty === "medium") {
+            } else if (level === "medium") {
                 incrementScore(CORRECT_med);
             } else {
                 incrementScore(CORRECT_hard);
