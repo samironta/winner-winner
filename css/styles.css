@@ -7,8 +7,8 @@ html {
 }
 
 body {
-    background-color: aquamarine;
-    background-image: url(../assets/images/pexels-jill-wellington-40815.jpg);
+
+    background-image: linear-gradient(to right, #693668, #A74482, #F84AA7);
     text-rendering: optimizeSpeed;
     font-size: 80%;
     padding: 0;
@@ -260,8 +260,8 @@ input::placeholder {
 }
 
 .confetti {
-    width: 15px;
-    height: 15px;
+    width: 40px;
+    height: 40px;
     background-color: #f2d74e;
     position: absolute;
     left: 50%;
