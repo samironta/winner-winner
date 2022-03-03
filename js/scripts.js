@@ -80,7 +80,7 @@ getNewQuestion = () => {
         localStorage.setItem("mostRecentScore", score);
 
         //go to the end page
-        return window.location.assign("/game-over.html");
+        return window.location.assign("../game-over.html");
     }
     questionCounter++;
 
@@ -130,7 +130,7 @@ choices.forEach(choice => {
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        }, 1000);
+        }, 2000);
     });
 });
 // updates score counter
