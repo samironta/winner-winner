@@ -20,7 +20,7 @@ It was created as an ducational project to demostrate lessons learnt about Advan
 
 ### 2ND MILESTONE PROJECT FOR CODE INSTITUTE – AN USER-CENTRIC INTERACTIVE WEBSITE
 
-[VIEW THE LIVE PROJECT HERE](https://samironta.github.io/CI_MSP1_TOPNOTCH-HOTEL/)
+[VIEW THE LIVE PROJECT HERE](https://samironta.github.io/winner-winner/)
 
 ---
 
